@@ -1,0 +1,21 @@
+<nav>
+  <div class="logo"><img src="../assets/img/logo.svg" width="50" /><span>Saurians</span></div>
+  <ul>
+    <li class="selected"><a routerLink="/bestiaire">Bestiaire</a></li>
+    <li><a routerLink="/nourriture">Nourriture</a></li>
+    <li><a href="#">Conditionnement</a></li>
+    <li><a href="#">Enrichissement</a></li>
+    <li class="chart" matTooltip="{{ chartToString() }}">
+      <a href="#">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <span>
+          <strong>{{ chartProducts.length - 1 }}</strong>
+        </span>
+      </a>
+    </li>
+  </ul>      
+</nav>
+  <router-outlet></router-outlet>
+<footer>
+  Saurians © 2017 - Powered by Angular 5.0.0
+</footer>

@@ -1,0 +1,68 @@
+h3{
+    font-family: JurassicPark;
+    font-weight: normal;
+    font-size:3em;
+    text-align: center;
+    color:#653f1a;
+    margin:0px;
+    transition: 0.2s color;
+}
+
+ul{
+    list-style: none;
+    display:block;
+    
+    li{
+        display:inline-block;
+        margin-right:1em;
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: 0.2s all;  
+    }
+
+    &:last-child{
+        margin-right:0;
+    }
+
+    li:not(.selected):hover, li.selected{
+        background-color:#c52626;
+    }
+}
+
+
+ul li:not(.selected):hover, ul li.selected{
+    background-color:#c52626;
+}
+
+ul li:not(.selected):hover h3, ul li.selected h3{
+    color:#d49354
+}
+
+ul li span{
+    display:block;
+}
+
+ul li div.card a{
+    display:inline-block;
+}
+
+ul li div.card a.quick_preview{
+    float:left;
+    font-size:1.5em;
+    color:white;
+}
+
+ul li div.card a.move_to_chart{
+    float:right;
+    font-size:1.5em;
+    color:white;
+}
+
+.card{
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(88, 88, 88, 0.75);
+    -moz-box-shadow: 2px 2px 1px 0px rgba(88, 88, 88, 0.75);
+    box-shadow: 2px 2px 1px 0px rgba(88, 88, 88, 0.75);
+    background:rgb(117, 77, 36);
+    width:200px;
+    height:225px;
+}

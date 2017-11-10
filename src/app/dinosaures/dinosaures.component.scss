@@ -1,0 +1,158 @@
+$jurassic-red: #c52626;
+$darkest-brown: #744c24;
+
+*{
+    font-family: 'Aubrey', cursive;
+    color:#404040;
+}
+
+h2{
+    color:#c52626;
+    font-family: JurassicPark;
+    font-weight: normal;
+    font-size:80pt;
+    text-decoration: underline;
+    margin:0px;
+}
+
+h3{
+    font-family: JurassicPark;
+    font-weight: normal;
+    font-size:3em;
+    text-align: center;
+    color:#653f1a;
+    margin:0px;
+    transition: 0.2s color;
+}
+
+mat-sidenav-container{
+    background-color:#b99a7b;   
+    height:97%;
+}
+
+mat-sidenav{
+    background-color: #906652;
+    border-right: 2px solid $jurassic-red;
+
+    *{
+        font-family: "Aubrey", cursive;
+    }
+
+    mat-radio-button{
+        padding-left:0.5em;
+    }
+
+    .filters_regime, .filters_epoque{
+        background:#b99a7b;
+        padding-bottom:0.5em;
+    }
+
+    .filters_regime h4, .filters_epoque h4{
+        width:100%;
+        margin:0px;
+        margin-bottom:0.5em;
+        padding:0.5em 0 0.5em 0;
+        text-align:center;
+        background:$darkest-brown;
+        color:whitesmoke;
+    }
+
+    mat-form-field{
+        padding:0.5em 0.5em 0 0.5em;
+        color:whitesmoke;
+
+        .mat-form-field-placeholder{
+            color:$jurassic-red;
+        }
+
+        .mat-form-field-underline{
+            background-color:$jurassic-red;
+        }
+    }
+}
+
+mat-radio-button{
+    display:block;
+    margin-bottom:0.5em;
+    
+    &:last-child{
+        margin-bottom:0px;
+    }
+
+    &.mat-radio-checked{
+        color:#ff5252;
+        font-weight:bold;
+    }
+}
+
+ul{
+    list-style: none;
+    display:block;
+
+    li{
+        display:inline-block;
+        margin-right:1em;
+        cursor: pointer;
+        transition: 0.2s all;   
+
+        &:last-child{
+            margin-right:0;
+        }
+        
+        &:hover .card_bottom *{
+            color:#d49354;
+        }
+
+        &:not(.selected):hover, &.selected{
+            background-color:#c52626;
+        }
+
+        &:not(.selected):hover h3, &.selected h3{
+            color:#d49354;
+        }
+
+        span{
+            display: block;
+        }
+
+    }
+}
+
+.card_bottom{
+    display:flex;
+
+    a{
+        width:10%;
+        font-size:1.5em;
+        color:rgba(197, 38, 38, 0.7);
+        transition: 0.2s color;
+
+        &:hover{
+            color:rgba(197, 38, 38, 1);
+            transition: 0.2s color;
+        }
+
+        &.quick_preview{
+            padding-left:5px;
+        }
+
+        &.add_to_chart{
+            padding-right:7px;
+        }
+    }
+
+    span.price{
+        width:80%;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 1.4em;
+        font-size:1.2em;
+        font-weight: bold;
+    }
+}
+
+img{
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(88, 88, 88, 0.75);
+    -moz-box-shadow: 2px 2px 1px 0px rgba(88, 88, 88, 0.75);
+    box-shadow: 2px 2px 1px 0px rgba(88, 88, 88, 0.75);
+}

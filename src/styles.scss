@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./jurassic-red";
+@import url('https://fonts.googleapis.com/css?family=Aubrey');
+
+@font-face {
+    font-family: JurassicPark;
+    src: url("./assets/fonts/Jurassic Park.ttf");
+}
+
+html{
+    height:91.1%;
+    background-color:#b99a7b;
+}
+
+body{
+    margin:0px;
+    height:100%;
+}
+
+.cdk-overlay-pane .mat-dialog-container{
+    padding:0px;
+}

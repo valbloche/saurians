@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>
+    {{data.dino.name}}
+</h2>
+
+<mat-dialog-content>
+    <div>
+        <img src="../assets/img/{{data.dino.name}}.png" alt="{{data.dino.name}}" width="300">
+        <div class="card_maincontent">
+            <mat-chip-list>
+                <mat-chip color="{{ data.dino.regime == '0' && 'primary' || 'accent' }}" selected="true">{{data.regimes[data.dino.regime]}}</mat-chip>
+                <mat-chip color="warn" selected="true">{{data.epoques[data.dino.epoque]}}</mat-chip>
+            </mat-chip-list>
+            <span>{{data.dino.description}}</span>
+        </div>
+        <span class="price">{{ (data.dino.price) ? (data.dino.price |number : fractionSize) + ' $' : '' }}</span>
+    </div>
+    <mat-dialog-actions>
+        <button mat-raised-button color="warn" [mat-dialog-close]="true">OK, cool ...</button>
+        <button mat-raised-button mat-dialog-close color="primary" [mat-dialog-close]="true" (click)="addDinoToChart()">J'achète !</button>
+    </mat-dialog-actions>
+</mat-dialog-content>

@@ -1,0 +1,102 @@
+$jurassic-red: #c52626;
+$darkest-brown: #744c24;
+
+div.logo{
+    float:left;
+    margin-left:1.5%;
+    font-family: "JurassicPark", Cambria;
+    font-size:3.3em;
+    color:#5d4634;
+
+    span{
+        position:relative;
+        left:7px;
+        bottom:9px;
+    }
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: center;
+
+    li{
+        display:inline-block;
+        font-family: "JurassicPark", Cambria;
+        font-weight: normal;
+        font-size:50pt;
+        margin-right:1.5em;
+            
+        &:last-child{
+            margin-right:0px;
+        }
+
+        a{
+            color:rgb(64, 64, 64);
+            text-decoration:none;
+            transition: 0.2s color;
+        }
+
+        &:hover a, &.selected a{
+            color:$jurassic-red;
+        }
+
+        &.chart i{
+            color: rgb(64, 64, 64);
+            font-size:0.8em;
+            -moz-transform: scaleX(-1);    /* Gecko */
+            -o-transform: scaleX(-1);      /* Opera */
+            -webkit-transform: scaleX(-1); /* Webkit */
+            transform: scaleX(-1);         /* Standard */
+        }
+
+        &.chart span {
+            width:20px;
+            height:20px;
+            position:relative;
+            display:inline-block;
+            right:10px;
+            top:7px;
+            border-radius: 10px;
+            background-color:$jurassic-red;
+            color:whitesmoke;
+
+            strong{
+                display:block;
+                position:relative;
+                font-family: "Aubrey", cursive;
+                font-size:10pt;
+                top:3px;
+            }
+        }
+
+        &.aside_revealer{
+            float:left;
+            vertical-align: middle;
+            line-height: 2.3em;
+            font-size:2em;
+            transition: 0.2s color;
+
+            &.opened{
+                color:$jurassic-red;
+            }
+
+            &:hover, &.closed{
+                color:#404040;
+            }
+        }
+    }
+
+}
+
+
+
+footer{
+    width:100%;
+    height:3%;
+    text-align: center;
+    vertical-align: middle;
+    line-height:2em;
+    font-family: "Aubrey", cursive;
+    color:whitesmoke;
+    background:$darkest-brown;
+}

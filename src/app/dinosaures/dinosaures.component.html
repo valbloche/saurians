@@ -1,0 +1,39 @@
+<mat-sidenav-container>
+<mat-sidenav #sidenav mode="side" opened="true">
+    <div>
+        <mat-form-field (color)="primary">
+          <input matInput type="text" name="search" placeholder="Recherche">
+        </mat-form-field>
+      </div>
+      <div class="filters">
+        <div class="filters_regime">
+          <h4>Régime</h4>
+          <mat-radio-group (change)="filterDinos($event, 'regime')">
+              <mat-radio-button value="0">Carnivore</mat-radio-button>
+              <mat-radio-button value="1">Herbivore</mat-radio-button>
+              <mat-radio-button value="2">Piscivore</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="filters_epoque">
+          <h4>Époque</h4>
+          <mat-radio-group (change)="filterDinos($event, 'epoque')">
+              <mat-radio-button value="0" class="md-primary">Trias</mat-radio-button>
+              <mat-radio-button value="1">Crétacé</mat-radio-button>
+              <mat-radio-button value="2">Jurassique</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+</mat-sidenav>
+<ul>
+  <li *ngFor="let dino of filteredDinos" (click)="openDialog(dino)" (input)="filterDinos(filterEpoques.value)">
+    <h3>{{dino.name}}</h3>
+    <div class="card">
+      <img src="../assets/img/{{dino.name}}.png" alt="{{dino.name}}" width="200">
+    </div>
+    <div class="card_bottom">
+        <span class="price">{{ (dino.price) ? (dino.price |number : fractionSize) + ' $' : '' }}</span>
+        <a class="add_to_chart" (click)="addDinoToChart($event, dino)"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+    </div>
+  </li>
+</ul>
+</mat-sidenav-container>

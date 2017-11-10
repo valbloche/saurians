@@ -1,0 +1,42 @@
+:host{
+    padding:0px;
+    background-color:brown;
+}
+mat-dialog-container{
+    background-color:brown;
+    
+}
+h2.mat-dialog-title{
+    width:100%;
+    margin-bottom:0px;
+    padding: 0.3em 0 0.2em 0;
+    vertical-align: middle;
+    font-family: "JurassicPark";
+    font-size:4em;
+    text-align:center;
+    background-color: #c52626;
+    color:#d49354;
+}
+mat-dialog-content{
+    width:100%;
+    margin:0;
+    padding:0;
+    font-family: 'Aubrey', cursive;
+    font-size:1.1em;
+    background-color: #b99a7b;
+}
+mat-dialog-content *{
+    font-family: 'Aubrey', cursive;
+    font-size:1em;
+}
+mat-dialog-content img{
+    float:left;
+}
+
+mat-dialog-content div.card_maincontent{
+    padding-top:0.3em;
+}
+
+mat-dialog-content mat-dialog-actions .mat-button-wrapper{
+    font-family: 'Aubrey', cursive;
+}
